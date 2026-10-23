@@ -1,0 +1,21 @@
+application:
+  name: Agent Sessions
+  version: 1.0.0
+  description: Shows your running Claude Code sessions with their title, status and whether they need your answer. Needs the free bridge from the repository running on your computer.
+  author: rybnico
+  bugs: https://github.com/rybnico/vobot-agent-sessions/issues
+  repository: https://github.com/rybnico/vobot-agent-sessions
+  licenses: MIT
+
+attributes:
+  enable_auto_carousel: true
+
+system_requirements:
+  minimum_version: 1.2.6
+  compatible_devices:
+    - MiniDock
+
+files:
+  include:
+    - __init__.py
+    - resources/icon.png

@@ -1,0 +1,7 @@
+# deploy.sh output and App Gallery packages
+dist/
+*.vbt
+# Agent scratch files
+scratchpad/
+__pycache__/
+.DS_Store

@@ -225,8 +225,11 @@ def _build_screen():
     _message.align(lv.ALIGN.CENTER, 0, _HEADER_H // 2)
     _message.set_text("Connecting...")
 
-    # Route encoder/button keys to the screen
-    _scr.add_event(_on_event, lv.EVENT.ALL, None)
+    # Route encoder/button keys to the screen. Register only the events we handle: with lv.EVENT.ALL,
+    # LVGL calls into Python for every draw event too, which crashes the firmware within minutes
+    # once the screen redraws often (pulsing rows, forced refreshes while a session waits).
+    _scr.add_event(_on_event, lv.EVENT.KEY, None)
+    _scr.add_event(_on_event, lv.EVENT.FOCUSED, None)
     group = lv.group_get_default()
     group.add_obj(_scr)
     lv.group_focus_obj(_scr)

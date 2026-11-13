@@ -1,6 +1,6 @@
 application:
   name: Agent Sessions
-  version: 1.0.0
+  version: 1.0.1
   description: Shows your running Claude Code sessions with their title, status and whether they need your answer. Needs the free bridge from the repository running on your computer.
   author: rybnico
   bugs: https://github.com/rybnico/vobot-agent-sessions/issues
